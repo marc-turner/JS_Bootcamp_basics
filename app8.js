@@ -117,16 +117,17 @@ const records = [
     },
 ]
 
-// const record = records.find(t => {
-//     return t.title.includes("P");
+// // const record = records.find(t => {
+// //     return t.title.includes("P");
+// // });
+
+// const beatles = records.filter(title => {
+//     return title.artist.includes("Beatles");
 // });
 
-const beatles = records.filter(title => {
-    return title.artist.includes("Beatles");
-});
+// const words = ['wag', 'dog', 'wig', 'log', 'bag'];
 
-const words = ['wag', 'dog', 'wig', 'log', 'bag'];
+// const hasLetterI = words.some(word => {
+//     return word.includes("i");
+// });
 
-const hasLetterI = words.some(word => {
-    return word.includes("i");
-});
