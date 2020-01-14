@@ -1,0 +1,7 @@
+.isWinner{
+    background-color: rgba(0, 128, 0, 0.3);
+}
+
+.isLoser{
+    background-color: rgba(128, 0, 0, 0.3);
+}
