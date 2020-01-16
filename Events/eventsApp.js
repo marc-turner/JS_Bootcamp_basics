@@ -45,4 +45,5 @@ for (let color of colors) {
     colorSquare.classList.add('box');
     colorSquare.style.backgroundColor = color;
     container.appendChild(colorSquare);
+    colorSquare.addEventListener('click', function() {});
 }
