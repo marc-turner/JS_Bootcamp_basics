@@ -36,20 +36,35 @@
 
 // EVENTS ON MULTIPLE ELEMENTS //
 
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
-const changeColor = function() {
-    const h1 = document.querySelector('h1');
-    console.log(`clicked a ${this.style.backgroundColor} box`);
-    h1.style.color = this.style.backgroundColor;
-};
+// const changeColor = function() {
+//     const h1 = document.querySelector('h1');
+//     console.log(`clicked a ${this.style.backgroundColor} box`);
+//     h1.style.color = this.style.backgroundColor;
+// };
 
-const container = document.querySelector('#container');
+// const container = document.querySelector('#container');
 
-for (let color of colors) {
-    const colorSquare = document.createElement('div');
-    colorSquare.classList.add('box');
-    colorSquare.style.backgroundColor = color;
-    container.appendChild(colorSquare);
-    colorSquare.addEventListener('click', changeColor);
-}
+// for (let color of colors) {
+//     const colorSquare = document.createElement('div');
+//     colorSquare.classList.add('box');
+//     colorSquare.style.backgroundColor = color;
+//     container.appendChild(colorSquare);
+//     colorSquare.addEventListener('click', changeColor);
+// }
+
+const addItemInput = document.querySelector('#textInput');
+const inputList = document.querySelector('#inputList');
+
+addItemInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        const newListItem = this.value;
+        const newListItemElement = document.createElement('li');
+        // add input value to li
+        newListItemElement.innerText = newListItem;
+        // appendChild to ul
+        inputList.appendChild(newListItemElement);
+        this.value = '';
+    }
+});
