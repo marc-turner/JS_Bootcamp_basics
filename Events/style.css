@@ -12,7 +12,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 500px;
+}
+
+h1 {
+    color: black;
 }
 
 .box {
