@@ -1,0 +1,21 @@
+/* button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+    width: 150px;
+} */
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+}
