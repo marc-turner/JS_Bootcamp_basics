@@ -54,17 +54,39 @@
 //     colorSquare.addEventListener('click', changeColor);
 // }
 
-const addItemInput = document.querySelector('#textInput');
-const inputList = document.querySelector('#inputList');
+// const addItemInput = document.querySelector('#textInput');
+// const inputList = document.querySelector('#inputList');
 
-addItemInput.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        const newListItem = this.value;
-        const newListItemElement = document.createElement('li');
-        // add input value to li
-        newListItemElement.innerText = newListItem;
-        // appendChild to ul
-        inputList.appendChild(newListItemElement);
-        this.value = '';
-    }
+// addItemInput.addEventListener('keypress', function(e) {
+//     if (e.key === 'Enter') {
+//         const newListItem = this.value;
+//         const newListItemElement = document.createElement('li');
+//         // add input value to li
+//         newListItemElement.innerText = newListItem;
+//         // appendChild to ul
+//         inputList.appendChild(newListItemElement);
+//         this.value = '';
+//     }
+// });
+
+const form = document.querySelector('#signup-form');
+
+const creditCardNum = document.querySelector('#ccNum');
+const terms = document.querySelector('#terms');
+const veggie = document.querySelector('#veggie');
+
+// const textInput = document.addEventListener('submit', function(e) {
+//     alert('form submitted');
+//     console.log(creditCardNum.value);
+//     console.log(terms.checked);
+//     console.log(veggie.value);
+//     e.preventDefault();
+// });
+
+// Input and change events //
+
+const formData = {};
+creditCardNum.addEventListener('input', e => {
+    console.log('Credit Card Change', e);
+    formData['cc'] = e.target.value;
 });
